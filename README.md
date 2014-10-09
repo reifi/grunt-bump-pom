@@ -1,10 +1,10 @@
-# grunt-bump-nexus - version 0.0.1-2
+# grunt-bump-pom - version 0.0.1
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![Build Status](https://travis-ci.org/phun-ky/grunt-bump-nexus.png)](https://travis-ci.org/phun-ky/grunt-bump-nexus)
-[![Dependency Status](https://gemnasium.com/phun-ky/grunt-bump-nexus.png)](https://gemnasium.com/phun-ky/grunt-bump-nexus)
-[![NPM version](https://badge.fury.io/js/grunt-bump-nexus.png)](http://badge.fury.io/js/grunt-bump-nexus)
+[![Build Status](https://travis-ci.org/phun-ky/grunt-bump-pom.png)](https://travis-ci.org/phun-ky/grunt-bump-pom)
+[![Dependency Status](https://gemnasium.com/phun-ky/grunt-bump-pom.png)](https://gemnasium.com/phun-ky/grunt-bump-pom)
+[![NPM version](https://badge.fury.io/js/grunt-bump-pom.png)](http://badge.fury.io/js/grunt-bump-pom)
 
-> A grunt plugin to bump the deploy version in your nexus deployment file(s)
+> A grunt plugin to bump the deploy version in your pom xml file
 
 ##Table of Contents
 * [Getting started](#getting-started)
@@ -21,28 +21,28 @@
 ## Getting started
 Install this grunt plugin next to your project's `Gruntfile.js` with:
 
-    npm install grunt-bump-nexus --save-dev
+    npm install grunt-bump-pom --save-dev
 
 To remove it:
 
-    npm uninstall grunt-bump-nexus --save-dev
+    npm uninstall grunt-bump-pom --save-dev
 
 Then add this line to your project's `Gruntfile.js`:
 
-    grunt.loadNpmTasks('grunt-bump-nexus');
+    grunt.loadNpmTasks('grunt-bump-pom');
 
 
 ## API
 Add something like this in your gruntfile:
 
-    bumpnexus : {
+    bumppom : {
       options : {
         files : [
-          'test/inc/test_before.txt'
+          'test/inc/pom.xml'
         ],
         backup : true,
-        project : 'projectx',
-        version_identifier : 'resource.maven.war.version'
+        bump_from_pom : true,
+        bump_from_package : false
       }
     },
 
@@ -50,28 +50,45 @@ Add something like this in your gruntfile:
 
 ### files *Required*
 
-Type: `Array`
+Type: `Array`  
 
 ### backup
 
-Type: `Boolean`
-Default: `true`
+Type: `Boolean`  
+Default: `true`  
 
-### project *Required*
+### bump_from_pom
 
-Type : `String`
+Type: `Boolean`  
+Default: `true`  
 
-### version_identifier *Required*
+Should we bump the version that is in the files given?
 
-Type : `String`
+### bump_from_package
 
+Type: `Boolean`  
+Default: `false`  
 
+Should we bump the version in the files given from `package.json`?
 
+### xmlSettings
+
+Type: `Boolean`  
+Default: 
+
+    {
+      ignoreComments                : false,
+      ignoreProcessingInstructions  : false,
+      createMainDocument            : true,
+      prettyIndent                  : 4
+    }
+
+Extra options for the xml to json parser. See [node-jsxml](https://npmjs.org/package/node-jsxml/) for more information.
 ___________
 
 
 ## Documentation
-The client code is ment to be self documented. Feel free to [browse the code.](https://github.com/phun-ky/grunt-bump-nexus)
+The client code is ment to be self documented. Feel free to [browse the code.](https://github.com/phun-ky/grunt-bump-pom)
 
 
 ## Development
@@ -79,9 +96,9 @@ The client code is ment to be self documented. Feel free to [browse the code.](h
 
 Download and install the module
 
-    $ mkdir grunt-bump-nexus
-    $ cd grunt-bump-nexus
-    $ git clone git@github.com:phun-ky/grunt-bump-nexus.git .
+    $ mkdir grunt-bump-pom
+    $ cd grunt-bump-pom
+    $ git clone git@github.com:phun-ky/grunt-bump-pom.git .
     $ git-flow init
     $ npm install
     $ grunt
@@ -115,7 +132,7 @@ This will update the README.
 
 
 ## Contributing
-Found a bug? Have a feature request? Please create an [issue](https://github.com/phun-ky/grunt-bump-nexus/issues).
+Found a bug? Have a feature request? Please create an [issue](https://github.com/phun-ky/grunt-bump-pom/issues).
 
 #### Code-contributing
 
@@ -127,18 +144,9 @@ If you runt `grunt`, tests will be run automagically when you save a file. If yo
 
 
 ## Release history
-**DATE**       **VERSION**   **CHANGES**                               
-* 2014-10-07   b14306d       Merge branch 'develop'                    
-* 2014-10-07   ceb7494       Updated readme and gruntfile              
-* 2014-10-07   8c65058       Merge branch 'hotfix/0.0.1-1' into develop
-* 2014-10-07   44f6929       Merge branch 'hotfix/0.0.1-1'             
-* 2014-10-07   a0a989a       Fixed bump                                
-* 2014-10-07   0bfea98       Merge branch 'release/0.0.1' into develop 
-* 2014-10-07   f0235f4       Merge branch 'release/0.0.1'              
-* 2014-10-07   3eadb8b       Initial build before first release        
-* 2014-10-07   fef335c       Added files and tasks                     
-* 2014-10-07   8e1db9d       Added bak files                           
-* 2014-10-07   c8f0702       Initial commit                            
+**DATE**       **VERSION**   **CHANGES**                  
+* 2014-10-09   5d1ca9a       Reset version in package.json
+* 2014-10-09   8f6d87d       Initial commit               
 
 ## License and Copyright
 Copyright (c) 2014 Alexander Vassbotn Røyne-Helgesen, contributors.  
@@ -146,5 +154,5 @@ Released under the ,  licenses
 
 
 ---
-_README generated 2014-10-07_
+_README generated 2014-10-09_
 

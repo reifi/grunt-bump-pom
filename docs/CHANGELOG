@@ -1,44 +1,8 @@
-b14306d:
-  date: 2014-10-07
+5d1ca9a:
+  date: 2014-10-09
   changes:
-    - "Merge branch 'develop'"
-ceb7494:
-  date: 2014-10-07
-  changes:
-    - "Updated readme and gruntfile"
-8c65058:
-  date: 2014-10-07
-  changes:
-    - "Merge branch 'hotfix/0.0.1-1' into develop"
-44f6929:
-  date: 2014-10-07
-  changes:
-    - "Merge branch 'hotfix/0.0.1-1'"
-a0a989a:
-  date: 2014-10-07
-  changes:
-    - "Fixed bump"
-0bfea98:
-  date: 2014-10-07
-  changes:
-    - "Merge branch 'release/0.0.1' into develop"
-f0235f4:
-  date: 2014-10-07
-  changes:
-    - "Merge branch 'release/0.0.1'"
-3eadb8b:
-  date: 2014-10-07
-  changes:
-    - "Initial build before first release"
-fef335c:
-  date: 2014-10-07
-  changes:
-    - "Added files and tasks"
-8e1db9d:
-  date: 2014-10-07
-  changes:
-    - "Added bak files"
-c8f0702:
-  date: 2014-10-07
+    - "Reset version in package.json"
+8f6d87d:
+  date: 2014-10-09
   changes:
     - "Initial commit"
