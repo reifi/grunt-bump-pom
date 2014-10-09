@@ -1,6 +1,6 @@
 {
   "name": "grunt-bump-pom",
-  "version": "0.2.0",
+  "version": "0.0.0",
   "homepage": "https://github.com/phun-ky/grunt-bump-pom",
   "description": "A grunt plugin to bump the deploy version in your pom xml file",
   "scripts": {
