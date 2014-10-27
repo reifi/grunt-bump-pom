@@ -128,7 +128,7 @@ module.exports = function(grunt) {
         release === 'minor' ||
         release === 'patch' ||
         release === 'prerelease' ||
-        release === 'copy' ||
+        release === 'copyversion' ||
         semver.valid(release)
       ){
 
@@ -146,7 +146,7 @@ module.exports = function(grunt) {
           _pom_version_node.setValue( _version_to_bump );
         
 
-        } else if(options.bump_from_package || release === 'copy'){
+        } else if(options.bump_from_package || release === 'copyversion'){
           // Bump from version in package.json
 
           _version_to_bump = packageJSON.version;
@@ -155,7 +155,7 @@ module.exports = function(grunt) {
 
             grunt.verbose.writeln("Using version from 'package.json': '" + _version_to_bump + "'");
             
-            _pom_version_node.setValue((release === 'copy') ? _version_to_bump : semver.inc(_version_to_bump, release));
+            _pom_version_node.setValue((release === 'copyversion') ? _version_to_bump : semver.inc(_version_to_bump, release));
 
           } else {
 
