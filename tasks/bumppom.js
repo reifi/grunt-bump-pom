@@ -17,13 +17,13 @@ module.exports = function(grunt) {
 
   // Please see the grunt documentation for more information regarding task and
   // helper creation: https://github.com/cowboy/grunt/blob/master/docs/toc.md
-
+  
   // ==========================================================================
   // TASKS
   // ==========================================================================
 
   grunt.registerTask('bumppom', 'Task to bump pom.xml file', function(release) {
-
+    
     if(release){
 
       grunt.verbose.writeln("Initalizing bumppom with release: '" + release + "'..")
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       release = 'patch';
 
     }
-
+    
     var options = this.options({
       backup : true,
       bump_from_pom : true,
@@ -122,12 +122,13 @@ module.exports = function(grunt) {
       }
 
       release     = release || 'patch';
-
+      
       if(
         release === 'major' ||
         release === 'minor' ||
         release === 'patch' ||
         release === 'prerelease' ||
+        release === 'copy' ||
         semver.valid(release)
       ){
 
@@ -135,26 +136,26 @@ module.exports = function(grunt) {
         var _pom_xml_doc        = new jsxml.XML(_pom_data);
         var _pom_version_node   = _pom_xml_doc.child('project').child('version');
         var _pom_version_value  = _pom_version_node.getValue();
-
-        // Bump from given version
+        
         if(semver.valid(release)){
+          // Bump from given version
 
           _version_to_bump = release;
           grunt.verbose.writeln("Using given version: '" + _version_to_bump + "'");
 
           _pom_version_node.setValue( _version_to_bump );
+        
 
-        }
-        // Bump from version in package.json
-        else  if(options.bump_from_package){
+        } else if(options.bump_from_package || release === 'copy'){
+          // Bump from version in package.json
 
           _version_to_bump = packageJSON.version;
 
           if( semver.valid( _version_to_bump ) ){
 
             grunt.verbose.writeln("Using version from 'package.json': '" + _version_to_bump + "'");
-
-            _pom_version_node.setValue( semver.inc( _version_to_bump, release ) );
+            
+            _pom_version_node.setValue((release === 'copy') ? _version_to_bump : semver.inc(_version_to_bump, release));
 
           } else {
 
@@ -162,9 +163,8 @@ module.exports = function(grunt) {
 
           }
 
-        } 
+        } else {
         // Bump from version in given files
-        else {
 
           _version_to_bump = _pom_version_value;
           
