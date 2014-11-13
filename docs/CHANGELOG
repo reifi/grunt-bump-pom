@@ -1,3 +1,15 @@
+67c7e75:
+  date: 2014-11-13
+  changes:
+    - "Updated semver version"
+e8a0bbc:
+  date: 2014-10-09
+  changes:
+    - "Merge branch 'release/v0.0.1'"
+b108be3:
+  date: 2014-10-09
+  changes:
+    - "Removed backup files for testing, updated readme, built changelog and bumped version"
 5d1ca9a:
   date: 2014-10-09
   changes:

@@ -1,4 +1,4 @@
-# grunt-bump-pom - version 0.0.1
+# grunt-bump-pom - version 0.0.2
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![Build Status](https://travis-ci.org/phun-ky/grunt-bump-pom.png)](https://travis-ci.org/phun-ky/grunt-bump-pom)
 [![Dependency Status](https://gemnasium.com/phun-ky/grunt-bump-pom.png)](https://gemnasium.com/phun-ky/grunt-bump-pom)
@@ -144,9 +144,13 @@ If you runt `grunt`, tests will be run automagically when you save a file. If yo
 
 
 ## Release history
-**DATE**       **VERSION**   **CHANGES**                  
-* 2014-10-09   5d1ca9a       Reset version in package.json
-* 2014-10-09   8f6d87d       Initial commit               
+**DATE**       **VERSION**   **CHANGES**                                                          
+* 2014-11-13   67c7e75       Updated semver version                                               
+* 2014-10-09   e8a0bbc       Merge branch 'release/v0.0.1'                                        
+* 2014-10-09   b108be3       Removed backup files for testing, updated readme, built changelog and
+                             bumped version                                                       
+* 2014-10-09   5d1ca9a       Reset version in package.json                                        
+* 2014-10-09   8f6d87d       Initial commit                                                       
 
 ## License and Copyright
 Copyright (c) 2014 Alexander Vassbotn Røyne-Helgesen, contributors.  
@@ -154,5 +158,5 @@ Released under the ,  licenses
 
 
 ---
-_README generated 2014-10-09_
+_README generated 2014-11-13_
 
