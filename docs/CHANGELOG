@@ -1,7 +1,27 @@
+2570d31:
+  date: 2014-11-13
+  changes:
+    - "Merge pull request #1 from reifi/master"
+262a312:
+  date: 2014-11-13
+  changes:
+    - "Rebuilt with bumped version"
 67c7e75:
   date: 2014-11-13
   changes:
     - "Updated semver version"
+82f22f6:
+  date: 2014-10-27
+  changes:
+    - "Merge pull request #1 from reifi/feat-copy-version"
+df0f300:
+  date: 2014-10-27
+  changes:
+    - "renamed generally overused 'copy' param to more unique 'copyversion'"
+5ace47e:
+  date: 2014-10-27
+  changes:
+    - "Just copy version from package.json"
 e8a0bbc:
   date: 2014-10-09
   changes:

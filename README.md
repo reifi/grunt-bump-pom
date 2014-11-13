@@ -1,4 +1,4 @@
-# grunt-bump-pom - version 0.0.2
+# grunt-bump-pom - version 0.0.3
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![Build Status](https://travis-ci.org/phun-ky/grunt-bump-pom.png)](https://travis-ci.org/phun-ky/grunt-bump-pom)
 [![Dependency Status](https://gemnasium.com/phun-ky/grunt-bump-pom.png)](https://gemnasium.com/phun-ky/grunt-bump-pom)
@@ -145,7 +145,12 @@ If you runt `grunt`, tests will be run automagically when you save a file. If yo
 
 ## Release history
 **DATE**       **VERSION**   **CHANGES**                                                          
+* 2014-11-13   2570d31       Merge pull request #1 from reifi/master                              
+* 2014-11-13   262a312       Rebuilt with bumped version                                          
 * 2014-11-13   67c7e75       Updated semver version                                               
+* 2014-10-27   82f22f6       Merge pull request #1 from reifi/feat-copy-version                   
+* 2014-10-27   df0f300       renamed generally overused 'copy' param to more unique 'copyversion' 
+* 2014-10-27   5ace47e       Just copy version from package.json                                  
 * 2014-10-09   e8a0bbc       Merge branch 'release/v0.0.1'                                        
 * 2014-10-09   b108be3       Removed backup files for testing, updated readme, built changelog and
                              bumped version                                                       
