@@ -24,7 +24,7 @@
     "url": "https://github.com/phun-ky/grunt-bump-pom/blob/master/LICENSE"
   },
   "dependencies": {
-    "semver": "^4.0.3",
+    "semver": "~4.0.3",
     "node-jsxml": "^0.6.0"
   },
   "devDependencies": {
