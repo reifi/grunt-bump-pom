@@ -1,6 +1,6 @@
 {
   "name": "grunt-bump-pom",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "homepage": "https://github.com/phun-ky/grunt-bump-pom",
   "description": "A grunt plugin to bump the deploy version in your pom xml file",
   "scripts": {
@@ -35,9 +35,9 @@
     "grunt-contrib-clean": "latest",
     "grunt-cli": "latest",
     "grunt-verb": "~0.2.4",
-    "verb-contrib-templates": "^0.1.5",
-    "grunt-shell": "^1.1.1",
-    "grunt-contrib-copy": "^0.5.0",
+    "verb-contrib-templates": "~0.1.5",
+    "grunt-shell": "~1.1.1",
+    "grunt-contrib-copy": "~0.5.0",
     "grunt-bump": "0.0.15"
   },
   "keywords": [
