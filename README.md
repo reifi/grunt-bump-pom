@@ -1,4 +1,4 @@
-# grunt-bump-pom - version 0.0.4
+# grunt-bump-pom - version 0.0.5
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 [![Build Status](https://travis-ci.org/phun-ky/grunt-bump-pom.png)](https://travis-ci.org/phun-ky/grunt-bump-pom)
 [![Dependency Status](https://gemnasium.com/phun-ky/grunt-bump-pom.png)](https://gemnasium.com/phun-ky/grunt-bump-pom)
@@ -145,6 +145,8 @@ If you runt `grunt`, tests will be run automagically when you save a file. If yo
 
 ## Release history
 **DATE**       **VERSION**   **CHANGES**                                                          
+* 2014-11-13   592e570       Updated package.json                                                 
+* 2014-11-13   960048b       Updated deps version                                                 
 * 2014-11-13   9e50db6       Rebuilt after PR                                                     
 * 2014-11-13   2570d31       Merge pull request #1 from reifi/master                              
 * 2014-11-13   262a312       Rebuilt with bumped version                                          
@@ -165,4 +167,3 @@ Released under the ,  licenses
 
 ---
 _README generated 2014-11-13_
-
