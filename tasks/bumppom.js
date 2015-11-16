@@ -90,6 +90,15 @@ module.exports = function(grunt) {
 
     var _total = src.length;
     var _backup_dest = '';
+    
+    var fnReplaceSnapshot = function(version){
+      return (options.use_snapshot) ? version.replace(/\-.*$/, '-SNAPSHOT') : version;
+    };
+    
+    var fnBumpVersion = function (versionToBump, release) {
+      var version = (release === 'copyversion') ? versionToBump : semver.inc(versionToBump, release);
+      return fnReplaceSnapshot(version);
+    };
 
     src.forEach(function(filepath){
 
@@ -155,7 +164,7 @@ module.exports = function(grunt) {
 
             grunt.verbose.writeln("Using version from 'package.json': '" + _version_to_bump + "'");
             
-            _pom_version_node.setValue((release === 'copyversion') ? _version_to_bump : semver.inc(_version_to_bump, release));
+            _pom_version_node.setValue(fnBumpVersion(_version_to_bump, release));
 
           } else {
 
@@ -172,7 +181,7 @@ module.exports = function(grunt) {
 
             grunt.verbose.writeln("Using version from given files: '" + _version_to_bump + "'");
 
-            _pom_version_node.setValue( semver.inc( _version_to_bump, release ) );
+            _pom_version_node.setValue(fnBumpVersion(_version_to_bump, release));
 
           } else {
 

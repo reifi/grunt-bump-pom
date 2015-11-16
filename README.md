@@ -84,6 +84,14 @@ Default:
     }
 
 Extra options for the xml to json parser. See [node-jsxml](https://npmjs.org/package/node-jsxml/) for more information.
+
+### use_snapshot
+
+Type: `Boolean`  
+Default: `false`  
+
+Should we replace prelease versions with 'SNAPSHOT'?  
+Example:  1.2.3-0 becomes 1.2.3-SNAPSHOT
 ___________
 
 
